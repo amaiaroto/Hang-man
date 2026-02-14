@@ -1,9 +1,9 @@
 # **Hang-Man**
 ### How it works
-
+TBC
 
 ## How to run Hang-Man
-+ Open [hangman.html](github.com/amaiaroto/Hang-man/).
++ Open [hangman.html](github.com/amaiaroto/Hang-man/hangman.html).
 + Run with live server (or host your own).
 + **Tip:** *Go to devoloper tools. Find the header1 and look to find out the word.*\*
 
