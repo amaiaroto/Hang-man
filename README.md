@@ -1,6 +1,11 @@
 # **Hang-Man**
 ### How it works
-TBC
+  1. We create a word bank (117 words)
+  2. Select a random word from the bank
+  3. TBC
+	```
+  
+  ```
 
 ## How to run Hang-Man
 + Open [hangman.html](github.com/amaiaroto/Hang-man/hangman.html).
