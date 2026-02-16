@@ -53,4 +53,4 @@
 + Run with live server (or host the userr own).
 + **Tip:** *Go to devoloper tools. Find the header and look to find out the word.*\*
 
-\*If the user want to remove the "hidden" option. the user may. But, it only stays that way until the user refresh or close the page.
+\*If the user wants to remove the "hidden" option. the user may. But, it only stays that way until the user refreshs or exits the page.
