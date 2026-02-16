@@ -11,7 +11,7 @@
   9.  When the GIF reaches it's last frame, we use `alert()` to tell the user that the user lost
   10. If all the boxes have a letter, we tell the user that they won
 
-  Example\*\*:
+  Example\*:
   ```TypeScript
     let wordBank: String[] = [
         "apple",
@@ -47,10 +47,10 @@
       updateGame();
     }
   ```
-\*\*Not real example. Just an idea.
+\*Not real example. Just an idea.
 ## How to run Hang-Man
 + Open [hangman.html](github.com/amaiaroto/Hang-man/hangman.html).
 + Run with live server (or host the userr own).
-+ **Tip:** *Go to devoloper tools. Find the header and look to find out the word.*\*
++ **Tip:** *Go to devoloper tools. Find the header and look to find out the word.*\*\*
 
-\*If the user wants to remove the "hidden" option. the user may. But, it only stays that way until the user refreshs or exits the page.
+\*\*If the user wants to remove the "hidden" option. the user may. But, it only stays that way until the user refreshs or exits the page.
