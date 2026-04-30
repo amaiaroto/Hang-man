@@ -168,7 +168,7 @@ const wordBank = Array.from(
 
 console.log(`There are ${wordBank.length} unique words in the word bank.`);
 
-var wordElements = [];
+let wordElements = [];
 var correctWord;
 let maxAttp = 6;
 var keyboard, table;
@@ -176,7 +176,7 @@ var correctChars;
 const fontSize = "50px";
 var lettersLeft;
 var mistakes;
-var rub;
+const rub;
 
 function getRandomElement(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
