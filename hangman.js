@@ -116,10 +116,58 @@ const wordBank = Array.from(
             "judicial",
             "board",
             "bulb",
-            "printers"
+            "printers",
+            "glimmer",
+            "throttle",
+            "pomegranate",
+            "skitter",
+            "nebula",
+            "crunchwave",
+            "velcro",
+            "hollowbyte",
+            "sprocket",
+            "mirth",
+            "quartzling",
+            "driftcore",
+            "snailstorm",
+            "emberjack",
+            "plunk",
+            "gargantuan",
+            "blubber",
+            "gizmo",
+            "widget",
+            "doodle",
+            "whisper",
+            "twinkle",
+            "sizzle",
+            "flumble",
+            "plorp",
+            "snagglemint",
+            "vortexture",
+            "blinkwhistle",
+            "grumblewax",
+            "twizzlecrank",
+            "morbloon",
+            "zaplet",
+            "cranklefoam",
+            "yibble",
+            "sprocket",
+            "gargantuan",
+            "embersnatch",
+            "klunk",
+            "blaster",
+            "wobble",
+            "blazeflare",
+            "quibble",
+            "snizzle",
+            "flibber",
+            "plunket",
         ]
     )
 );
+
+console.log(`There are ${wordBank.length} unique words in the word bank.`);
+
 var wordElements = [];
 var correctWord;
 let maxAttp = 6;
@@ -127,7 +175,7 @@ var keyboard, table;
 var correctChars;
 var fontSize = "50px";
 var lettersLeft;
-var errors;
+var mistakes;
 var rub;
 
 function getRandomElement(arr) {
@@ -137,10 +185,10 @@ function getRandomElement(arr) {
 
 
 function changeWord() {
-
-    rub = new SuperGif({ gif: document.getElementById("himg"), show_progress_bar:false} );
+    rub = new SuperGif(
+        { gif: document.getElementById("hangman_image"),
+         show_progress_bar:false} );
     rub.load()
-    //rub.move_to(3);
 
     correctChars = Array.from(getRandomElement(wordBank))
     var text = document.getElementById("generate_from_button");
@@ -154,13 +202,13 @@ function changeWord() {
     elems = [];
     const table = tableCreate(correctWord.length);
     const keyboard = keyboardCreate(keys);
-    errors = 0
+    mistakes = 0
     lettersLeft = correctChars.length
 };
 
 function keyboardCreate(keys) {
     const body = document.body;
-    const kbd = document.getElementById('k');
+    const kbd = document.getElementById('keyboard_table');
     kbd.replaceChildren([]);
 
     kbd.style.border = '3px solid black';
@@ -179,9 +227,8 @@ function keyboardCreate(keys) {
             sendCharacter(button.textContent, correctChars);
             this.hidden = true;
         });
-        //`sendCharacter(${button.textContent})`);
+
         td.appendChild(button);
-        //   td.appendChild(document.createElement('button'));
     }
 
     body.appendChild(kbd);
@@ -193,28 +240,25 @@ function keyboardCreate(keys) {
         for (var n = 0; n < cchars.length; n++) {
             if (cchars[n].toUpperCase() == char) {
                 found = true;
-                // console.log('ah');
                 document.getElementById(`cell${n}`).innerHTML = cchars[n].toUpperCase();
                 lettersLeft--;
-                // console.log(cchars.pop());
                 if (lettersLeft <= 0) {
-                    alert(`You won in ${maxAttp} tries!`);
+                    alert(`You won in ${mistakes} tries!`);
                     changeWord();
                 }
             }
         }
         if (!found) {
-            errors++;
-            rub.move_to(errors);
-            console.log(errors);
+            mistakes++;
+            rub.move_to(mistakes);
+            console.log(mistakes);
 
-            if (errors >= maxAttp) {  
+            if (mistakes >= maxAttp) {  
                 alert(`You lost. The word was "${correctWord}".`);
 
                 changeWord();
             }
         }
-        //console.log(`sentCharacter "${cell.getAttribute('id')}"\n${String(cchar)}`);
     }
 
 
@@ -224,12 +268,9 @@ function keyboardCreate(keys) {
 function tableCreate(wl) {
     const body = document.body;
 
-    const tbl = document.getElementById('h');
+    const tbl = document.getElementById('hangman_table');
     tbl.replaceChildren([])
-    // for (var i=0; i < tbl.childNodes; i++);
-    // tbl.removeChild(tbl.childNodes[i]);
 
-    //tbl.style.width = '100px';
     tbl.style.border = '3px solid black';
 
     const tr = tbl.insertRow();
