@@ -173,7 +173,7 @@ var correctWord;
 let maxAttp = 6;
 var keyboard, table;
 var correctChars;
-var fontSize = "50px";
+const fontSize = "50px";
 var lettersLeft;
 var mistakes;
 var rub;
