@@ -1,6 +1,6 @@
 # **Hang-Man**
 ### How it works
-  1. We create a word bank (117 words)
+  1. We create a word bank (156 words)
   2. Select a random word from the bank
   3. Generate the static tables
   4. Make the buttons
@@ -49,8 +49,4 @@
   ```
 \*Not real example. Just an idea.
 ## How to run Hang-Man
-+ Open [hangman.html](github.com/amaiaroto/Hang-man/hangman.html).
-+ Run with live server (or host the userr own).
-+ **Tip:** *Go to devoloper tools. Find the header and look to find out the word.*\*\*
-
-\*\*If the user wants to remove the "hidden" option. the user may. But, it only stays that way until the user refreshs or exits the page.
++ Go to the [website](https://www.hangman.com/play).

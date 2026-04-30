@@ -176,7 +176,7 @@ var correctChars;
 const fontSize = "50px";
 var lettersLeft;
 var mistakes;
-const rub;
+var rub;
 
 function getRandomElement(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
